@@ -8,6 +8,8 @@ import 'element-ui/lib/theme-default/index.css'
 
 Vue.use(ElementUI)
 
+import './components/index'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
