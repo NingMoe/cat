@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    <el-row type="flex">
+    <el-row id="main" type="flex">
       <el-col :span="4">
         <app-sidebar></app-sidebar>
       </el-col>
