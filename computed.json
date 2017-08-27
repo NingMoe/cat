@@ -1,0 +1,58 @@
+@type: 描述数据的类型
+@param: 描述参数的类型
+@value: 说明该参数由哪些固定值组成，只是用来表示
+
+
+/**
+ * 猫数据
+ * @type {Object} 猫的数据
+ *
+ * @param age {Number} 猫的年龄(单位：月)
+ * @value:
+          1: 1个月
+          2: 2个月
+          3: 3个月
+          ...
+          12: 1岁
+          13: 成猫
+          14: 成猫
+          ...
+ *
+ * @param weight {Number} 体重(单位：KG)
+ *
+ * @param status {Number} 状态
+   @value:
+            0: 小猫,
+            1: 健康成猫,
+            2: 肥胖猫
+            3: 哺乳期猫咪
+            4: 已绝育猫咪
+ *
+ *
+ * @param {String} statusText 状态描述 = "小猫" || "健康成猫" || "肥胖猫" || "哺乳期猫咪" || "已绝育猫咪"
+ *
+ * age=hidden|month|number|password|range|research
+ */
+{
+  "age": 1,           // 1个月
+  "weight": 2,        // 2KG
+  "status": 1,        // 0 => "小猫"
+  "status": "小猫"    //  "小猫"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
