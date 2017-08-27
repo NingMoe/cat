@@ -5,7 +5,9 @@
       <el-col :span="4">
         <app-sidebar></app-sidebar>
       </el-col>
+      <el-col :span="20"></el-col>
     </el-row>
+    <app-footer></app-footer>
   </div>
 </template>
 
