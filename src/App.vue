@@ -9,7 +9,6 @@
         <router-view class="app-content"></router-view>
       </el-col>
     </el-row>
-    <app-footer></app-footer>
   </div>
 </template>
 
@@ -27,7 +26,8 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+}
+#app .app-main {
+  flex: 1;
 }
 </style>
