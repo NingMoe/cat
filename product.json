@@ -1,0 +1,29 @@
+/*
+ *  产品 product {Object}
+ *
+ *  @param id {String} 产品编码
+ *  @param name {String} 产品名称
+ *  @param calorie {Number} 产品热量
+ *  @param protein {Number} 产品蛋白质
+ *  @param weight {Number} 产品每包克数(单位：克)
+ *  @param fat {Number} 产品脂肪
+ *  @param erCode {String} 产品二维码参数
+ *  @param imgSrc {String} 产品广告图片
+ *  @param weidianLink {String} 产品广告链接(微店地址)
+ *  @param visitorsAdsText {String} 游客结果广告文字
+ *  @param customerAdsText {String} 客户结果广告文字
+ */
+
+{
+  "id": "XYZ123",
+  "name": "萌猫定制鸡肉猫饭",
+  "calorie": 200,
+  "protein": 100,
+  "weight": 100,
+  "fat": 50,
+  "erCode": "xxx",
+  "imgSrc": "http://27ng.com/logo.png",
+  "weidianLink": "https://item.weidian.com/814821",
+  "visitorsAdsText": "根据计算你家宝贝每天能吃掉萌猫定制鸡肉猫饭<span><span>克合计<span><span>包~",
+  "customerAdsText": "根据计算你家宝贝每天能吃掉鸭肉猫饭<span><span>克合计<span><span>包~"
+}

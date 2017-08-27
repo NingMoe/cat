@@ -1,0 +1,19 @@
+/*
+ *  广告设置 adsSetting {Object}
+ *  @param visitors {Object} 游客/客户首页广告
+ *  @param customer {Object} 客户计算结果广告
+ *  @param note {String}  计算结果文字内容（公用)
+ */
+
+{
+  "visitors": {
+    "imgSrc": "http://27ng.com/logo.png",          // 图片地址
+    "weidianLink": "http://27ng.com"               // 图片跳转地址(微店地址)
+
+  },
+  "customer": {
+    "imgSrc": "http://27ng.com/logo.png",          // 图片地址
+    "weidianLink": "http://27ng.com"               // 图片跳转地址(微店地址)
+  },
+  "note": "注：计算方式参考NRC、AAFCO公布的摄入标准以及自己以及身边朋友的养猫经验综合得出，结果较为精准。但每只猫咪的情况各不相同，希望小主们能够给喵子多一点关爱观察自家喵的情况。毕竟适合自己的才是最好的。"
+}
