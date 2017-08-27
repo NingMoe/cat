@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <app-header></app-header>
-    <el-row id="main" type="flex">
+    <el-row class="app-main" type="flex">
       <el-col :span="4">
         <app-sidebar></app-sidebar>
       </el-col>
-      <el-col :span="20"></el-col>
+      <el-col :span="20">
+        <router-view class="app-content"></router-view>
+      </el-col>
     </el-row>
     <app-footer></app-footer>
   </div>
