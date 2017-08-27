@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <app-header></app-header>
+    <el-row type="flex">
+      <el-col :span="4"></el-col>
+    </el-row>
     <router-view></router-view>
   </div>
 </template>
