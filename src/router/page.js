@@ -10,16 +10,16 @@ export default [
     ]
   },
   {
-    path: '/setting',
-    component: resolve => require(['../views/setting'], resolve),
+    path: '/config',
+    component: resolve => require(['../views/config'], resolve),
     children: [
       {
         path: 'ads',
-        component: resolve => require(['../views/setting/ads'], resolve)
+        component: resolve => require(['../views/config/ads'], resolve)
       },
       {
         path: 'params',
-        component: resolve => require(['../views/setting/params'], resolve)
+        component: resolve => require(['../views/config/params'], resolve)
       }
     ]
   },

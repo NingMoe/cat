@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登录</title>
+<style>
+a,abbr,acronym,address,article,aside,audio,b,big,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,ul,var,video{margin:0;padding:0;border:0;box-sizing: border-box}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1}ol,ul{list-style:none}a{text-decoration:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+</style>
+<style>
+.site{display:flex;min-height:100vh;font-weight:100;flex-direction:column;}
+.content{display:flex;background-color:#f5f5f5;flex:1;flex-direction:row;}
+.img-text{display:flex;width:44%;text-align:center;transform:translateY(140px);flex-direction:column;justify-content:space-around;}
+.c-site-text{color:#4d2d07;font-size:2pc;}
+.e-site-text{color:#c8c8c8;font-size:24px;}
+.form{display:flex;flex:1;flex-direction:column;justify-content:center;}
+.form form{padding:90px 78px 20px;width:646px;height:462px;border-radius:5px;background-color:#fff;box-shadow:#ccc 0 0 75pt 10px;}
+.form-title{height:26px;color:#d0b08c;font-size:26px;line-height:26px;}
+.msg-wrap{height:38px;line-height:38px;color: #f60;}
+input{box-sizing:border-box;}
+input[type=password],input[type=text]{display:block;margin-bottom:18px;padding-left:18px;width:100%;height:46px;border:1px solid #e5e3e3;border-radius:4px;color:#cccccf;font-weight:100;font-size:18px;line-height:44px;transition:.5s;}
+input[type=password]:focus,input[type=text]:focus{outline:0;border-color:#999;}
+.button-wrap{line-height:52px;}
+input[type=submit]{width:13pc;height:52px;border:none;border-radius:5px;background-color:#d0b08c;color:#fff;font-weight:100;font-size:20px;cursor:pointer;}
+input[type=submit]:focus{outline:0;background-color:#a98d6e;}
+.forgot-pwd{float:right;color:#ffab49;font-size:18px;}
+.foot{height:164px;background:-webkit-gradient(linear,0 0,0 bottom,from(#d0d0d0),to(#f5f5f5));}
+</style>
+</head>
+
+<body>
+<div class="site">
+    <div class="content">
+        <div class="img-text">
+            <div class="text">
+                <p class="c-site-text">萌宠定制后台</p>
+                <p class="e-site-text">M C D Z</p>
+            </div>
+            <div class="img">
+            </div>
+        </div>
+        <div class="form">
+            <form action="/admin/j_spring_security_check" method="post">
+                <p class="form-title">登录Login</p>
+                <p class="msg-wrap"></p>
+                <input type="text" placeholder="邮箱" name="j_username" required>
+                <input type="password" placeholder="密码" name="j_password" required>
+                <input type="hidden" name="login_success_url" value="/index.html">
+                <div class="button-wrap">
+                    <input type="submit" value="登录">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="foot"></div>
+</div>
+<script>
+let msg = document.querySelector('.msg-wrap'),
+    getQueryString = () => {
+        let parmas = {};
+        let query = window.location.search.slice(1);
+        if(query === '') {
+            return parmas;
+        }
+        let queries = query.split('&');
+        for(let i = 0; i < queries.length; i++) {
+            let param = queries[i].split('=');
+            if(typeof parmas[param[0]] === 'undefined') {
+                parmas[param[0]] = param[1]
+            }
+        }
+        return parmas;
+    }
+if(getQueryString().msg !== undefined) {
+    msg.innerHTML = decodeURI(getQueryString().msg);
+}
+</script>
+</body>
+
+</html>

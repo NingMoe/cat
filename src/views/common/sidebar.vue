@@ -4,15 +4,15 @@
     theme="dark"
     class="el-menu-vertical-demo"
     id="sidebar"
-    :default-openeds="['/', '/setting', '/product']"
+    :default-openeds="['/', '/config', '/product']"
     :router="true"
     @open="handleOpen"
     @close="handleClose">
     <el-menu-item index="/"><i class="el-icon-menu"></i>首页</el-menu-item>
-    <el-submenu index="/setting">
+    <el-submenu index="/config">
       <template slot="title"><i class="el-icon-setting"></i>设置</template>
-      <el-menu-item index="/setting/params">参数设置</el-menu-item>
-      <el-menu-item index="/setting/ads">广告设置</el-menu-item>
+      <el-menu-item index="/config/params">参数设置</el-menu-item>
+      <el-menu-item index="/config/ads">广告设置</el-menu-item>
     </el-submenu>
     <el-submenu index="/product">
       <template slot="title"><i class="el-icon-picture"></i>产品管理</template>
@@ -39,9 +39,3 @@
     }
   }
 </script>
-
-<style scoped>
-  #sidebar {
-    height: 100%;
-  }
-</style>

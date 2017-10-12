@@ -1,0 +1,283 @@
+接口地址：https://www.mengchongdingzhi.com
+
+后台：
+参数信息：
+get/post:/admin/config/config.htm
+返回：
+{
+    "message": "成功",
+    "status": 1,
+    "data": {
+        "protein": {
+            "sterilizedCat": 11,
+            "cat11": 10,
+            "cat12": 10,
+            "cat10": 10,
+            "cat8": 10,
+            "cat9": 10,
+            "cat6": 10,
+            "lactationCat": 11,
+            "fatCat": 11,
+            "cat7": 10,
+            "cat1": 10,
+            "cat3": 10,
+            "cat2": 10,
+            "cat5": 10,
+            "cat4": 10,
+            "adultCat": 11
+        },
+        "fat": {
+            "sterilizedCat": 11,
+            "cat11": 10,
+            "cat12": 10,
+            "cat10": 10,
+            "cat8": 10,
+            "cat9": 10,
+            "cat6": 10,
+            "lactationCat": 11,
+            "fatCat": 11,
+            "cat7": 10,
+            "cat1": 10,
+            "cat3": 10,
+            "cat2": 10,
+            "cat5": 10,
+            "cat4": 10,
+            "adultCat": 11
+        },
+        "calorie": {
+            "sterilizedCat": 11,
+            "cat11": 10,
+            "cat12": 10,
+            "cat10": 10,
+            "cat8": 10,
+            "cat9": 10,
+            "cat6": 10,
+            "lactationCat": 11,
+            "fatCat": 11,
+            "cat7": 10,
+            "cat1": 10,
+            "cat3": 10,
+            "cat2": 10,
+            "cat5": 10,
+            "cat4": 10,
+            "adultCat": 11
+        }
+    }
+}
+
+参数设置：
+/admin/config/update.htm
+参数：
+	k:protein|fat|calorie
+	v:值
+	{
+		"cat1": 10,
+		"cat2": 10,
+		"cat3": 10,
+		"cat4": 10,
+		"cat5": 10,
+		"cat6": 10,
+		"cat7": 10,
+		"cat8": 10,
+		"cat9": 10,
+		"cat10": 10,
+		"cat11": 10,
+		"cat12": 10,
+		"adultCat": 11,
+		"fatCat": 11,
+		"sterilizedCat": 11,
+		"lactationCat": 11
+	}
+
+广告信息：
+/admin/config/ads.htm
+返回：
+{
+    "message": "成功",
+    "status": 1,
+    "data": {
+        "visitors": {
+            "imgSrc": "http://wwww.baidu.com",
+            "weidianLink": "1111111111"
+        },
+		"customer": {
+            "imgSrc": "http://wwww.baidu.com",
+            "weidianLink": "1111111111"
+        },
+        "note": "注：计算方式参考NRC、AAFCO公布的摄入标准以及自己以及身边朋友的养猫经验综合得出，结果较为精准。但每只猫咪的情况各不相同，希望小主们能够给喵子多一点关爱观察自家喵的情况。毕竟适合自己的才是最好的。"
+    }
+}
+广告设置
+/admin/config/set-ad.htm
+参数：
+	k:visitors|customer|note
+	v:{"imgSrc":"http://wwww.baidu.com","weidianLink":"1111111111"}
+ k=note时 v为字符串
+ 
+ 产品分页 
+ /admin/product/page.htm
+ 返回：
+ {
+    "message": "成功",
+    "status": 1,
+    "data": {
+        "dataList": [
+            {
+                "enabled": 1,
+                "weight": 0,
+                "upd_id": 1,
+                "ins_id": 1,
+                "fat": 0,
+                "score": 36,
+                "calorie": 0,
+                "customer_ads_text": "",
+                "img_src": "",
+                "id": 36,
+                "ins_dt": "2017-08-29 09:20:18",
+                "er_code": "",
+                "visitors_ads_text": "",
+                "protein": 0,
+                "name": "test",
+                "upd_dt": "2017-08-29 09:20:18",
+                "weidian_link": ""
+            }
+        ],
+        "noList": [
+            "1"
+        ],
+        "rowCnt": 1,
+        "totalPage": 1,
+        "currentPage": 1,
+        "pageSize": 10,
+        "offset": 0
+    }
+}
+添加产品
+/admin/product/edit.htm
+
+删除产品
+/admin/product/delete.htm
+参数：id
+
+排序
+/admin/product/update-score.htm
+参数：
+id1,id2
+
+------------------------
+小程序
+------------------------
+产品列表
+/api/product/page.htm
+
+扫码获取产品信息
+/api/product/detail.htm
+参数：code 二维码参数
+
+游客计算：
+/api/visitors.htm
+参数:
+age:猫龄
+weight：体重
+status:状态  0: 小猫,1: 健康成猫,2: 肥胖猫 3: 哺乳期猫咪 4: 已绝育猫咪
+返回：
+{
+    "message": "成功",
+    "status": 1,
+    "data": {
+        "weight": 1.2,
+        "status": 0,
+        "protein": 12,
+        "fat": 12,
+        "age": 2,
+        "note ": "注：计算方式参考NRC、AAFCO公布的摄入标准以及自己以及身边朋友的养猫经验综合得出，结果较为精准。但每只猫咪的情况各不相同，希望小主们能够给喵子多一点关爱观察自家喵的情况。毕竟适合自己的才是最好的。",
+        "products": [
+            {
+                "insId": 1,
+                "insDt": "2017-08-29 09:13:09",
+                "updId": 1,
+                "updDt": "2017-08-29 16:42:37",
+                "id": 35,
+                "name": "鸡肉牛肉猫饭",
+                "calorie": 10,
+                "protein": 10,
+                "fat": 10,
+                "weight": 100,
+                "erCode": "aa",
+                "imgSrc": "",
+                "weidianLink": "",
+                "visitorsAdsText": "根据计算你家宝贝每天能吃掉萌猫定制鸡肉猫饭<text class=\"red\">8600克</text>合计<text class=\"red\">86.0包</text>~",
+                "customerAdsText": "根据计算你家宝贝每天能吃掉萌猫定制鸡肉猫饭%s合计%s~",
+                "enabled": 1,
+                "score": 35
+            },
+            {
+                "insId": 1,
+                "insDt": "2017-08-29 09:20:18",
+                "updId": 1,
+                "updDt": "2017-08-29 16:42:37",
+                "id": 36,
+                "name": "test",
+                "calorie": 10,
+                "protein": 10,
+                "fat": 10,
+                "weight": 100,
+                "erCode": "bb",
+                "imgSrc": "",
+                "weidianLink": "",
+                "visitorsAdsText": "根据计算你家宝贝每天能吃掉萌猫定制鸡肉猫饭<text class=\"red\">8600克</text>合计<text class=\"red\">86.0包</text>~",
+                "customerAdsText": "根据计算你家宝贝每天能吃掉萌猫定制鸡肉猫饭%s合计%s~",
+                "enabled": 1,
+                "score": 36
+            }
+        ],
+        "calorie": 860
+    }
+}
+
+
+客户计算：
+/api/customer.htm
+参数：
+age:猫龄
+weight：体重
+status:状态  0: 小猫,1: 健康成猫,2: 肥胖猫 3: 哺乳期猫咪 4: 已绝育猫咪
+pid:产品ID
+
+返回：
+{
+	"message": "成功",
+	"status": 1,
+	"data": {
+		"product": {
+			"insId": 1,
+			"insDt": "2017-08-29 09:13:09",
+			"updId": 1,
+			"updDt": "2017-08-29 16:42:37",
+			"id": 35,
+			"name": "鸡肉牛肉猫饭",
+			"calorie": 10,
+			"protein": 10,
+			"fat": 10,
+			"weight": 100,
+			"erCode": "aa",
+			"imgSrc": "",
+			"weidianLink": "",
+			"visitorsAdsText": "根据计算你家宝贝每天能吃掉萌猫定制鸡肉猫饭%s合计%s~",
+			"customerAdsText": "根据计算你家宝贝每天能吃掉萌猫定制鸡肉猫饭<text class=\"red\">13550克</text>合计<text class=\"red\">135.5包</text>~",
+			"enabled": 1,
+			"score": 35
+		},
+		"weight": 2.2,
+		"status": 0,
+		"protein": 22,
+		"fat": 22,
+		"age": 1,
+		"note ": "注：计算方式参考NRC、AAFCO公布的摄入标准以及自己以及身边朋友的养猫经验综合得出，结果较为精准。但每只猫咪的情况各不相同，希望小主们能够给喵子多一点关爱观察自家喵的情况。毕竟适合自己的才是最好的。",
+		"calorie": 1355
+	}
+}
+
+            
+            
+            
